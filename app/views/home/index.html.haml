@@ -1,0 +1,9 @@
+.starter-template
+  %h1 Invoice Me
+  %p.lead 
+    InvoiceMe is a web based invoice management service which has several hundred customers.Customers can create and send invoices to their clients via the simple online invoice management solution of InvoiceMe.
+- if user_signed_in? and !current_user.owned_businesses.any?
+  .jumbotron
+    %p.lead
+      Hey! You have not created any business. 
+      =link_to "Create Now", new_business_path

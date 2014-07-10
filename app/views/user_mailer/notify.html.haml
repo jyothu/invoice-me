@@ -1,0 +1,12 @@
+%h5= "Dear #{@invitation.name}!"
+
+%p
+  = "#{@invitation.business.owner.name} has invited you to his business"
+  = "Please Click here to join InvoiceMe"
+
+%p
+  = link_to 'SIGN UP', new_user_path, :target => :blank
+
+
+%p Thank You.
+InvoiceMe Support Team.

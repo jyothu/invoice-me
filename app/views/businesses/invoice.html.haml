@@ -1,0 +1,75 @@
+.container
+  .row
+    .col-xs-12
+      .text-center
+        %i.fa.fa-search-plus.pull-left.icon
+        %h4= "Invoice for Company #{@business.name}"
+      %hr
+      .col-xs-12
+        %h4 
+          Owner
+        = @business.owner.name
+        %h4 
+          Invoice Taken By
+        = current_user.name
+        %h4 
+          Invoice Date
+        = Date.today.strftime("%d %B %Y")
+        
+  .row
+    .col-md-12
+      .panel.panel-default
+        .panel-heading
+          %h3.text-center
+            %strong Summary
+        .panel-body
+          .table-responsive
+            %table.table.table-condensed
+              %thead
+                %tr
+                  %td
+                    %strong Some Details
+                  %td.text-center
+                    %strong Some Details
+                  %td.text-center
+                    %strong Some Details
+                  %td.text-right
+                    %strong Some Details
+              %tbody
+                %tr
+                  %td Some Details
+                  %td.text-center Some Details
+                  %td.text-center Some Details
+                  %td.text-right Some Details
+                %tr
+                  %td Some Details
+                  %td.text-center Some Details
+                  %td.text-center Some Details
+                  %td.text-right Some Details
+                %tr
+                  %td Some Details
+                  %td.text-center Some Details
+                  %td.text-center Some Details
+                  %td.text-right Some Details
+                %tr
+                  %td.highrow
+                  %td.highrow
+                  %td.highrow.text-center
+                    %strong Some Details
+                  %td.highrow.text-right Details
+                %tr
+                  %td.emptyrow
+                  %td.emptyrow
+                  %td.emptyrow.text-center
+                    %strong Shipping
+                  %td.emptyrow.text-right 
+                %tr
+                  %td.emptyrow
+                    %i.fa.fa-barcode.iconbig
+                  %td.emptyrow
+                  %td.emptyrow.text-center
+                    %strong Total
+                  %td.emptyrow.text-right
+
+
+= link_to "Back", businesses_path, :class => "btn"
